@@ -16,7 +16,7 @@ import { motion } from 'framer-motion';
 const testimonials = [
   {
     name: 'Juliana S.',
-    avatar: 'https://i.pravatar.cc/150?img=1',
+    avatar: 'https://i.imgur.com/zuejkEK.jpeg',
     rating: 5,
     quote:
       'A experiência foi simplesmente divina! Meus cílios nunca estiveram tão lindos. A atenção aos detalhes é impressionante. Virei cliente fiel!',
