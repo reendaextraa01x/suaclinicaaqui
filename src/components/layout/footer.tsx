@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black/10 bg-secondary/30">
+    <footer className="border-t border-black/10 bg-secondary/40">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-6">
         <p className="text-center text-sm text-muted-foreground sm:text-left">
           &copy; {new Date().getFullYear()} Clínica de Estética. Todos os direitos reservados.

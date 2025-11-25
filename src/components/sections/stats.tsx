@@ -25,7 +25,7 @@ export function Stats() {
   ];
 
   return (
-    <section id="stats" className="bg-muted/30 py-20 sm:py-28">
+    <section id="stats" className="bg-secondary/30 py-20 sm:py-28">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-12 text-center md:grid-cols-3 md:gap-8">
           {stats.map((stat) => (

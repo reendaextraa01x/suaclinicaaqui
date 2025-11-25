@@ -57,7 +57,7 @@ export function WhyChooseUs() {
 
 
   return (
-    <section ref={sectionRef} className="relative w-full py-20 sm:py-28 overflow-hidden">
+    <section ref={sectionRef} className="relative w-full bg-background py-20 sm:py-28 overflow-hidden">
       <div className="absolute inset-0 z-0">
         {parallaxImage && (
           <motion.div className="relative h-full w-full" style={{ y }}>

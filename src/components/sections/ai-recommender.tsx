@@ -69,7 +69,7 @@ export function AiRecommender() {
   }
 
   return (
-    <section id="booking" className="w-full py-20 sm:py-28 bg-muted/30">
+    <section id="booking" className="w-full py-20 sm:py-28 bg-muted/40">
       <div className="container mx-auto px-4 md:px-6">
         <Card className="max-w-2xl mx-auto border-primary/30 bg-card shadow-2xl shadow-primary/10">
           <CardHeader className="text-center">

@@ -26,7 +26,7 @@ export function BeforeAfterGallery() {
   });
 
   return (
-    <section id="gallery" className="w-full bg-muted/40 py-20 sm:py-28">
+    <section id="gallery" className="w-full bg-background py-20 sm:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">Nossas Transformações</h2>

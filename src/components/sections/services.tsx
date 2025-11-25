@@ -52,7 +52,7 @@ const servicesData = [
 
 export function Services() {
   return (
-    <section id="services" className="w-full py-20 sm:py-28">
+    <section id="services" className="w-full bg-muted/40 py-20 sm:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">Nossos Serviços</h2>
