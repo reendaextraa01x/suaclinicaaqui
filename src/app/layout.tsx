@@ -3,7 +3,7 @@ import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Clínica de Estética',
+  title: 'Sua Clínica',
   description: 'Serviços de Beleza de Luxo',
 };
 
