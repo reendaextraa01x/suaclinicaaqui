@@ -50,20 +50,20 @@ export function Hero() {
     >
       {heroImage && (
         <video
-          src={heroImage.imageUrl.replace('.jpg', '.mp4')}
+          src={heroImage.imageUrl}
           autoPlay
           loop
           muted
           playsInline
           className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover transform -translate-x-1/2 -translate-y-1/2"
-          poster={heroImage.imageUrl}
+          poster={heroImage.imageUrl.replace('.mp4', '.jpg')}
         >
-          <source src={heroImage.imageUrl.replace('.jpg', '.mp4')} type="video/mp4" />
+          <source src={heroImage.imageUrl} type="video/mp4" />
           Seu navegador não suporta a tag de vídeo.
         </video>
       )}
 
-      <div className="absolute inset-0 bg-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/30" />
 
       <motion.div
         className="pointer-events-none absolute inset-0 opacity-100 transition-opacity duration-300"
@@ -86,15 +86,15 @@ export function Hero() {
           >
             <motion.h1
               variants={itemVariants}
-              className="font-headline text-5xl font-bold tracking-tight text-primary sm:text-6xl md:text-7xl lg:text-8xl"
-              style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}
+              className="font-headline text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
+              style={{ textShadow: '0 4px 30px hsl(var(--primary) / 0.5)' }}
             >
               Sua Beleza, Nossa Inspiração.
             </motion.h1>
             <motion.p
               variants={itemVariants}
-              className="font-body text-xl text-foreground/80 md:text-2xl"
-              style={{ textShadow: '0 2px 10px rgba(0,0,0,0.1)' }}
+              className="font-body text-xl text-white/90 md:text-2xl"
+              style={{ textShadow: '0 2px 15px rgba(0,0,0,0.3)' }}
             >
               Eleve sua autoestima com tratamentos que transcendem o comum.
             </motion.p>
