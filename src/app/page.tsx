@@ -6,7 +6,7 @@ import { Services } from '@/components/sections/services';
 import { WhyChooseUs } from '@/components/sections/why-choose-us';
 import { Testimonials } from '@/components/sections/testimonials';
 import { BeforeAfterGallery } from '@/components/sections/before-after-gallery';
-import { AiRecommender } from '@/components/sections/ai-recommender';
+import { Location } from '@/components/sections/location';
 import WhatsAppButton from '@/components/ui/whatsapp-button';
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
         <WhyChooseUs />
         <Testimonials />
         <BeforeAfterGallery />
-        <AiRecommender />
+        <Location />
       </main>
       <Footer />
       <WhatsAppButton />
