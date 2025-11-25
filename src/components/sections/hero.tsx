@@ -2,10 +2,8 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { motion } from 'framer-motion';
 import React from 'react';
-import Image from 'next/image';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -31,22 +29,20 @@ const itemVariants = {
 };
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
-
   return (
     <motion.section
       className="relative h-[90svh] w-full overflow-hidden"
     >
-      {heroImage && (
-         <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            data-ai-hint={heroImage.imageHint}
-            fill
-            className="object-cover"
-            priority
-         />
-      )}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
+        >
+          <source src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-demos.appspot.com/o/beautysalon.mp4?alt=media&token=a0c3b3f6-5a73-401d-9359-22a3c70624c4" type="video/mp4" />
+          Seu navegador não suporta a tag de vídeo.
+        </video>
       
       <div className="absolute inset-0 bg-black/30" />
       
