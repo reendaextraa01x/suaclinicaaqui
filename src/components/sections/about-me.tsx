@@ -36,14 +36,16 @@ export function AboutMe() {
   const professionalImage = PlaceHolderImages.find((img) => img.id === 'about-me-professional');
 
   return (
-    <section className="w-full bg-background py-20 sm:py-28">
+    <motion.section 
+      className="w-full bg-background py-20 sm:py-28"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div 
+        <div 
           className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={containerVariants}
         >
           <motion.div className="relative aspect-square w-full max-w-md mx-auto" variants={itemVariants}>
             {professionalImage && (
@@ -54,7 +56,7 @@ export function AboutMe() {
                   data-ai-hint={professionalImage.imageHint}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
             )}
@@ -89,8 +91,8 @@ export function AboutMe() {
             </motion.div>
 
           </motion.div>
-        </motion.div>
+        </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
