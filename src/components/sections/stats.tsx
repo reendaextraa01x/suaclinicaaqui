@@ -38,7 +38,7 @@ export function Stats() {
   ];
 
   return (
-    <section id="stats" className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/30 via-background to-background py-20 sm:py-28">
+    <section id="stats" className="bg-background py-20 sm:py-28" style={{backgroundImage: 'radial-gradient(hsl(var(--muted)) 1px, transparent 1px)', backgroundSize: '4px 4px'}}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
           {stats.map((stat) => (
