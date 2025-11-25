@@ -30,6 +30,8 @@ const itemVariants = {
   },
 };
 
+const WHATSAPP_LINK = `https://wa.me/5511999999999?text=${encodeURIComponent("Olá! Gostaria de agendar uma consulta.")}`;
+
 export function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   const title = "Sua Beleza, Nossa Inspiração.";
@@ -76,7 +78,7 @@ export function Hero() {
             </motion.p>
             <motion.div variants={itemVariants}>
               <Button asChild size="lg" className="font-bold text-lg glow-on-hover hover:scale-105">
-                <Link href="#booking">Agende Sua Consulta</Link>
+                <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">Agende Sua Consulta</Link>
               </Button>
             </motion.div>
           </motion.div>

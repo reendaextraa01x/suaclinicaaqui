@@ -30,11 +30,13 @@ const itemVariants = {
   },
 };
 
+const WHATSAPP_LINK = `https://wa.me/5511999999999?text=${encodeURIComponent("Olá! Vi seu perfil no site e gostaria de agendar um horário.")}`;
+
 export function AboutMe() {
   const professionalImage = PlaceHolderImages.find((img) => img.id === 'about-me-professional');
 
   return (
-    <section id="about" className="w-full bg-background py-20 sm:py-28">
+    <section className="w-full bg-background py-20 sm:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center"
@@ -82,7 +84,7 @@ export function AboutMe() {
 
             <motion.div variants={itemVariants}>
               <Button asChild size="lg" className="font-bold text-lg glow-on-hover hover:scale-105">
-                <Link href="#booking">Agende um Horário Comigo</Link>
+                <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">Agende um Horário Comigo</Link>
               </Button>
             </motion.div>
 

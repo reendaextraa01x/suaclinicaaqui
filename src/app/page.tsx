@@ -16,11 +16,19 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Stats />
-        <Services />
+        <div id="services">
+          <Services />
+        </div>
         <WhyChooseUs />
-        <Testimonials />
-        <AboutMe />
-        <Location />
+        <div id="testimonials">
+          <Testimonials />
+        </div>
+        <div id="about">
+          <AboutMe />
+        </div>
+        <div id="contact">
+          <Location />
+        </div>
       </main>
       <Footer />
       <WhatsAppButton />

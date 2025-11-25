@@ -4,14 +4,14 @@ import { MapPin, Clock, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-export function Location() {
-  const googleMapsEmbedUrl = `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Space+Needle,Seattle+WA`;
+const WHATSAPP_LINK = `https://wa.me/5511999999999?text=${encodeURIComponent("Olá! Gostaria de agendar um horário.")}`;
 
+export function Location() {
   return (
-    <section id="booking" className="w-full py-20 sm:py-28 bg-muted/40">
+    <section className="w-full py-20 sm:py-28 bg-muted/40">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">Nossa Localização</h2>
+          <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">Nossa Localização e Contato</h2>
           <p className="mt-4 text-muted-foreground md:text-lg">
             Venha nos visitar e desfrute de uma experiência de beleza inesquecível. Estamos ansiosos para recebê-la!
           </p>
@@ -53,7 +53,7 @@ export function Location() {
                   Clique no botão abaixo para garantir seu horário conosco.
                 </p>
                 <Button asChild size="lg" className="font-bold text-lg glow-on-hover hover:scale-105">
-                  <Link href="#booking">Agende Agora</Link>
+                  <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">Agende Agora</Link>
                 </Button>
               </div>
             </div>
