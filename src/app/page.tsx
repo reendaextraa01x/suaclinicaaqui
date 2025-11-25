@@ -5,7 +5,7 @@ import { Stats } from '@/components/sections/stats';
 import { Services } from '@/components/sections/services';
 import { WhyChooseUs } from '@/components/sections/why-choose-us';
 import { Testimonials } from '@/components/sections/testimonials';
-import { BeforeAfterGallery } from '@/components/sections/before-after-gallery';
+import { AboutMe } from '@/components/sections/about-me';
 import { Location } from '@/components/sections/location';
 import WhatsAppButton from '@/components/ui/whatsapp-button';
 
@@ -19,7 +19,7 @@ export default function Home() {
         <Services />
         <WhyChooseUs />
         <Testimonials />
-        <BeforeAfterGallery />
+        <AboutMe />
         <Location />
       </main>
       <Footer />
