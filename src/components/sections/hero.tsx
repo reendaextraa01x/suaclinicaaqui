@@ -81,7 +81,7 @@ export function Hero() {
                 style={{ textShadow: '0 4px 30px rgba(0, 0, 0, 0.4)' }}
               >
                 {title.split("").map((char, index) => (
-                  <motion.span key={index} variants={letterVariants} className="inline-block">
+                  <motion.span key={index} variants={letterVariants}>
                     {char === " " ? "\u00A0" : char}
                   </motion.span>
                 ))}
