@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -12,33 +12,20 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.3,
       delayChildren: 0.3,
     },
   },
 };
 
-const letterVariants = {
+const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
-      ease: [0.4, 0.0, 0.2, 1],
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
       duration: 0.8,
-      ease: 'easeOut',
-      delay: 1.5,
+      ease: [0.4, 0.0, 0.2, 1],
     },
   },
 };
@@ -69,24 +56,17 @@ export function Hero() {
           <motion.div
             initial="hidden"
             animate="visible"
+            variants={containerVariants}
             className="max-w-4xl mx-auto space-y-8"
           >
-            <AnimatePresence>
-              <motion.h1
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                aria-label={title}
-                className="font-headline text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-pink-200"
-                style={{ textShadow: '0 4px 30px rgba(0, 0, 0, 0.4)' }}
-              >
-                {title.split("").map((char, index) => (
-                  <motion.span key={index} variants={letterVariants}>
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-              </motion.h1>
-            </AnimatePresence>
+            <motion.h1
+              variants={itemVariants}
+              aria-label={title}
+              className="font-headline text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-pink-200"
+              style={{ textShadow: '0 4px 30px rgba(0, 0, 0, 0.4)' }}
+            >
+              {title}
+            </motion.h1>
             <motion.p
               variants={itemVariants}
               className="font-body text-xl text-white/90 md:text-2xl"
