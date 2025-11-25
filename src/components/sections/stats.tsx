@@ -15,8 +15,8 @@ const StatItem = ({
 }) => {
   const { count, ref } = useCountUp(value);
   return (
-    <div className="group rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm transition-all duration-300 hover:border-primary/20 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
-      <div className="mb-4 text-primary transition-transform duration-300 group-hover:scale-110">
+    <div className="group rounded-2xl border border-[hsl(var(--gold)_/_0.4)] bg-black/5 p-8 text-center backdrop-blur-sm transition-all duration-300 hover:border-[hsl(var(--gold))] hover:bg-black/10 hover:shadow-2xl hover:shadow-[hsl(var(--gold)_/_0.15)] hover:-translate-y-2">
+      <div className="mb-4 text-[hsl(var(--gold))] transition-transform duration-300 group-hover:scale-110">
         {icon}
       </div>
       <span
@@ -38,7 +38,7 @@ export function Stats() {
   ];
 
   return (
-    <section id="stats" className="bg-gradient-to-b from-secondary/30 to-background py-20 sm:py-28">
+    <section id="stats" className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/30 via-background to-background py-20 sm:py-28">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
           {stats.map((stat) => (
