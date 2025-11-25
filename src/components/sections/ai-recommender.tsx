@@ -12,7 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} size="lg" className="w-full font-bold bg-secondary text-secondary-foreground transition-all hover:bg-secondary/90 hover:shadow-[0_0_15px_hsl(var(--secondary))]">
+    <Button type="submit" disabled={pending} size="lg" className="w-full font-bold bg-primary text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-[0_0_15px_hsl(var(--primary))]">
       {pending ? (
         <>
           <WandSparkles className="mr-2 h-4 w-4 animate-spin" />
@@ -69,12 +69,12 @@ export function AiRecommender() {
   }
 
   return (
-    <section id="booking" className="w-full py-20 sm:py-28 bg-black">
+    <section id="booking" className="w-full py-20 sm:py-28 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
-        <Card className="max-w-2xl mx-auto border-primary/30 bg-muted/30 shadow-2xl shadow-primary/10">
+        <Card className="max-w-2xl mx-auto border-primary/30 bg-card shadow-2xl shadow-primary/10">
           <CardHeader className="text-center">
             <CardTitle className="font-headline text-4xl text-primary">Consultor de Beleza IA</CardTitle>
-            <CardDescription className="md:text-lg text-white/80">
+            <CardDescription className="md:text-lg text-foreground/80">
               Não sabe qual serviço é o certo para você? Carregue uma foto do seu rosto e nossa IA sugerirá o tratamento perfeito.
             </CardDescription>
           </CardHeader>
@@ -108,7 +108,7 @@ export function AiRecommender() {
                   ) : (
                     <div className="text-center">
                       <UploadCloud className="mx-auto h-12 w-12 text-muted-foreground" />
-                      <p className="mt-2 text-sm font-semibold text-white/90">Clique para carregar uma foto</p>
+                      <p className="mt-2 text-sm font-semibold text-foreground/90">Clique para carregar uma foto</p>
                       <p className="text-xs text-muted-foreground">PNG, JPG ou WEBP</p>
                     </div>
                   )}
@@ -129,7 +129,7 @@ export function AiRecommender() {
             </form>
 
             {state.message && (
-              <div className={`mt-6 text-center p-4 rounded-md ${state.success ? 'bg-green-900/50 text-green-300' : 'bg-red-900/50 text-red-300'}`}>
+              <div className={`mt-6 text-center p-4 rounded-md ${state.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
                 <p className="font-bold">{state.message}</p>
               </div>
             )}

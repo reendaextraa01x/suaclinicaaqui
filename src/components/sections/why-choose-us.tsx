@@ -34,12 +34,12 @@ export function WhyChooseUs() {
           className="object-cover object-center"
         />
       )}
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm" />
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">Por que nos escolher?</h2>
-          <p className="mt-4 text-white/80 md:text-lg">
+          <p className="mt-4 text-foreground/80 md:text-lg">
             Onde a arte encontra o luxo para uma experiência de beleza inesquecível.
           </p>
         </div>
@@ -47,13 +47,13 @@ export function WhyChooseUs() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-xl border border-primary/20 bg-black/30 p-8 text-center text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-primary/10 hover:shadow-primary/20 hover:-translate-y-2"
+              className="rounded-xl border border-primary/20 bg-white/30 p-8 text-center text-foreground shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-primary/10 hover:shadow-primary/20 hover:-translate-y-2"
             >
               <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted/50">
                 {feature.icon}
               </div>
               <h3 className="font-headline text-2xl font-bold">{feature.title}</h3>
-              <p className="mt-2 text-white/70">{feature.description}</p>
+              <p className="mt-2 text-foreground/70">{feature.description}</p>
             </div>
           ))}
         </div>

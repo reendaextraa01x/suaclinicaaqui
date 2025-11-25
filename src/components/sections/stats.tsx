@@ -12,7 +12,7 @@ const StatItem = ({ value, label }: { value: number; label: string }) => {
       >
         +{count.toLocaleString()}
       </span>
-      <p className="mt-2 font-body text-lg text-white/80">{label}</p>
+      <p className="mt-2 font-body text-lg text-foreground/80">{label}</p>
     </div>
   );
 };

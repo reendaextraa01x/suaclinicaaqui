@@ -64,7 +64,7 @@ export function Services() {
           {servicesData.map((service) => {
             const image = PlaceHolderImages.find((img) => img.id === service.id);
             return (
-              <Card key={service.id} className="group flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 border-transparent hover:border-primary/30 bg-muted/20">
+              <Card key={service.id} className="group flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 border-transparent hover:border-primary/30 bg-card">
                 <CardHeader className="p-0">
                   {image && (
                     <div className="aspect-video relative overflow-hidden">
@@ -79,8 +79,8 @@ export function Services() {
                   )}
                 </CardHeader>
                 <CardContent className="flex-1 p-6">
-                  <CardTitle className="font-headline text-2xl text-white">{service.title}</CardTitle>
-                  <CardDescription className="mt-2 text-white/70">{service.description}</CardDescription>
+                  <CardTitle className="font-headline text-2xl text-foreground">{service.title}</CardTitle>
+                  <CardDescription className="mt-2 text-foreground/70">{service.description}</CardDescription>
                 </CardContent>
                 <CardFooter className="flex items-center justify-between p-6 pt-0">
                   <p className="text-2xl font-bold font-headline text-primary">{service.price}</p>
