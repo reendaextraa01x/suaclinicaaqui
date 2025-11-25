@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
+import React from 'react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -30,9 +31,23 @@ const itemVariants = {
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const gradientX = useTransform(mouseX, (val) => `${val}px`);
+  const gradientY = useTransform(mouseY, (val) => `${val}px`);
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    mouseX.set(event.clientX - rect.left);
+    mouseY.set(event.clientY - rect.top);
+  };
 
   return (
-    <section className="relative h-[90svh] w-full overflow-hidden">
+    <motion.section
+      onMouseMove={handleMouseMove}
+      className="relative h-[90svh] w-full overflow-hidden"
+    >
       {heroImage && (
         <video
           src={heroImage.imageUrl.replace('.jpg', '.mp4')}
@@ -47,7 +62,15 @@ export function Hero() {
           Seu navegador não suporta a tag de vídeo.
         </video>
       )}
-      <div className="absolute inset-0 bg-primary/10" />
+
+      <motion.div
+        className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background: `radial-gradient(400px circle at ${gradientX} ${gradientY}, hsl(var(--primary) / 0.15), transparent 80%)`,
+        }}
+      />
+      
+      <div className="absolute inset-0 bg-black/10" />
       <div className="diamond-dust"></div>
       <div className="diamond-dust layer-2"></div>
       <div className="diamond-dust layer-3"></div>
@@ -82,6 +105,6 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
