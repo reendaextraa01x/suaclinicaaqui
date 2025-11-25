@@ -61,14 +61,14 @@ export function Hero() {
             <motion.h1
               variants={itemVariants}
               className="font-headline text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
-              style={{ textShadow: '0 3px 20px rgba(0, 0, 0, 0.4)' }}
+              style={{ textShadow: '0 4px 30px rgba(0, 0, 0, 0.6)' }}
             >
               Sua Beleza, Nossa Inspiração.
             </motion.h1>
             <motion.p
               variants={itemVariants}
               className="font-body text-xl text-white/90 md:text-2xl"
-              style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)' }}
+              style={{ textShadow: '0 3px 15px rgba(0, 0, 0, 0.7)' }}
             >
               Eleve sua autoestima com tratamentos que transcendem o comum.
             </motion.p>
