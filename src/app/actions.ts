@@ -18,7 +18,7 @@ export async function getServiceSuggestion(
   const photo = formData.get('photoDataUri');
 
   if (!photo || typeof photo !== 'string') {
-    return { success: false, message: 'Please upload an image.' };
+    return { success: false, message: 'Por favor, carregue uma imagem.' };
   }
 
   try {
@@ -28,13 +28,13 @@ export async function getServiceSuggestion(
     const result = await suggestServices(input);
     return {
       success: true,
-      message: `We suggest: ${result.serviceSuggestion}`,
+      message: `Nossa sugestão para você é: ${result.serviceSuggestion}`,
     };
   } catch (error) {
-    console.error('AI suggestion failed:', error);
+    console.error('Falha na sugestão da IA:', error);
     return {
       success: false,
-      message: 'An error occurred. Please try again later.',
+      message: 'Ocorreu um erro. Por favor, tente novamente mais tarde.',
     };
   }
 }

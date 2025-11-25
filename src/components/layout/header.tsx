@@ -9,7 +9,7 @@ export default function Header() {
           Clínica de Estética
         </Link>
         <Button asChild className="font-bold text-lg glow-on-hover hover:scale-105">
-          <Link href="#booking">Book Now</Link>
+          <Link href="#booking">Agende Agora</Link>
         </Button>
       </div>
     </header>

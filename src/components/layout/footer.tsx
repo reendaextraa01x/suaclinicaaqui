@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-black">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-6">
         <p className="text-center text-sm text-muted-foreground sm:text-left">
-          &copy; {new Date().getFullYear()} Clínica de Estética. All rights reserved.
+          &copy; {new Date().getFullYear()} Clínica de Estética. Todos os direitos reservados.
         </p>
         <div className="flex items-center gap-4">
           <Link href="#" className="text-muted-foreground transition-colors hover:text-primary" prefetch={false}>

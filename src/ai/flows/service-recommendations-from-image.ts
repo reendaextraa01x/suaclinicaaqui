@@ -3,11 +3,11 @@
 'use server';
 
 /**
- * @fileOverview Suggests relevant beauty services based on an uploaded customer image.
+ * @fileOverview Sugere serviços de beleza relevantes com base em uma imagem enviada pelo cliente.
  *
- * - suggestServices - A function that takes an image and returns service suggestions.
- * - SuggestServicesInput - The input type for the suggestServices function.
- * - SuggestServicesOutput - The return type for the suggestServices function.
+ * - suggestServices - Uma função que recebe uma imagem e retorna sugestões de serviço.
+ * - SuggestServicesInput - O tipo de entrada para a função suggestServices.
+ * - SuggestServicesOutput - O tipo de retorno para a função suggestServices.
  */
 
 import {ai} from '@/ai/genkit';
@@ -17,7 +17,7 @@ const SuggestServicesInputSchema = z.object({
   photoDataUri: z
     .string()
     .describe(
-      'A photo of the customer’s face, as a data URI that must include a MIME type and use Base64 encoding. Expected format: \'data:<mimetype>;base64,<encoded_data>\'.' 
+      'Uma foto do rosto do cliente, como um URI de dados que deve incluir um tipo MIME e usar codificação Base64. Formato esperado: \'data:<mimetype>;base64,<encoded_data>\'.' 
     ),
 });
 export type SuggestServicesInput = z.infer<typeof SuggestServicesInputSchema>;
@@ -25,7 +25,7 @@ export type SuggestServicesInput = z.infer<typeof SuggestServicesInputSchema>;
 const SuggestServicesOutputSchema = z.object({
   serviceSuggestion: z
     .string()
-    .describe('The beauty service that is most appropriate for the customer.'),
+    .describe('O serviço de beleza mais apropriado para o cliente.'),
 });
 export type SuggestServicesOutput = z.infer<typeof SuggestServicesOutputSchema>;
 
@@ -37,13 +37,13 @@ const prompt = ai.definePrompt({
   name: 'suggestServicesPrompt',
   input: {schema: SuggestServicesInputSchema},
   output: {schema: SuggestServicesOutputSchema},
-  prompt: `You are an AI beauty consultant. A customer will upload a picture of their face, and you will suggest the single most appropriate beauty service for them from the list below. Respond with only the service name.
+  prompt: `Você é um consultor de beleza de IA. Um cliente fará o upload de uma foto do rosto e você sugerirá o serviço de beleza mais apropriado para ele na lista abaixo. Responda apenas com o nome do serviço.
 
-Eyelash Extensions
+Extensão de Cílios
 Lash Lifting
-Eyebrow Design
+Design de Sobrancelhas
 
-Here is the customer's face: {{media url=photoDataUri}}`,
+Aqui está o rosto do cliente: {{media url=photoDataUri}}`,
 });
 
 const suggestServicesFlow = ai.defineFlow(

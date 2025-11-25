@@ -18,7 +18,7 @@ export function BeforeAfterImage({
     <Card className="group relative aspect-square w-full overflow-hidden rounded-xl border-2 border-muted/50 shadow-lg transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20">
       <Image
         src={afterSrc}
-        alt="After"
+        alt="Depois"
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-110"
         data-ai-hint={afterHint}
@@ -27,7 +27,7 @@ export function BeforeAfterImage({
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       <Image
         src={beforeSrc}
-        alt="Before"
+        alt="Antes"
         fill
         className="object-cover opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0"
         data-ai-hint={beforeHint}

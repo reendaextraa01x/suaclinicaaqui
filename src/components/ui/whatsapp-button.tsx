@@ -17,7 +17,7 @@ const WhatsAppIcon = () => (
 );
 
 export default function WhatsAppButton() {
-  const phoneNumber = '1234567890'; // Substitua pelo seu número do WhatsApp
+  const phoneNumber = '5511999999999'; // Substitua pelo seu número do WhatsApp com código do país
   const message = "Olá! Gostaria de agendar um horário.";
 
   return (
@@ -25,7 +25,7 @@ export default function WhatsAppButton() {
       asChild
       size="icon"
       className="fixed bottom-6 right-6 z-50 h-16 w-16 rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:bg-[#128C7E] hover:scale-110"
-      aria-label="Chat on WhatsApp"
+      aria-label="Converse no WhatsApp"
     >
       <Link
         href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}

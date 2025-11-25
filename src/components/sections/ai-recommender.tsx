@@ -90,7 +90,7 @@ export function AiRecommender() {
                     <>
                       <Image
                         src={imagePreview}
-                        alt="Image preview"
+                        alt="Pré-visualização da imagem"
                         fill
                         className="object-contain rounded-lg p-2"
                       />
@@ -102,14 +102,14 @@ export function AiRecommender() {
                         onClick={(e) => { e.stopPropagation(); clearImage(); }}
                       >
                         <X className="h-4 w-4" />
-                        <span className="sr-only">Remove image</span>
+                        <span className="sr-only">Remover imagem</span>
                       </Button>
                     </>
                   ) : (
                     <div className="text-center">
                       <UploadCloud className="mx-auto h-12 w-12 text-muted-foreground" />
                       <p className="mt-2 text-sm font-semibold text-white/90">Clique para carregar uma foto</p>
-                      <p className="text-xs text-muted-foreground">PNG, JPG, or WEBP</p>
+                      <p className="text-xs text-muted-foreground">PNG, JPG ou WEBP</p>
                     </div>
                   )}
                 </div>
