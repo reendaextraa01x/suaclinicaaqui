@@ -15,7 +15,7 @@ const StatItem = ({
 }) => {
   const { count, ref } = useCountUp(value);
   return (
-    <div className="group rounded-xl border border-transparent bg-white/5 p-8 text-center transition-all duration-300 hover:border-primary/20 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10">
+    <div className="group rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm transition-all duration-300 hover:border-primary/20 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
       <div className="mb-4 text-primary transition-transform duration-300 group-hover:scale-110">
         {icon}
       </div>
