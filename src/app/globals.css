@@ -153,4 +153,55 @@
       transform: translate(30px, -70px);
     }
   }
+
+  /* Golden Lines Effect */
+  .golden-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .golden-lines::before,
+  .golden-lines::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      hsla(45, 100%, 85%, 0.05) 20px,
+      hsla(45, 100%, 85%, 0.05) 40px
+    );
+    animation: golden-lines-anim 15s linear infinite;
+    will-change: transform;
+  }
+
+  .golden-lines::after {
+     background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 20px,
+      hsla(45, 100%, 85%, 0.05) 20px,
+      hsla(45, 100%, 85%, 0.05) 40px
+    );
+    animation-direction: reverse;
+    animation-duration: 20s;
+  }
+
+  @keyframes golden-lines-anim {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
 }
