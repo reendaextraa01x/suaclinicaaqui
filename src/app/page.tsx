@@ -4,6 +4,7 @@ import { Hero } from '@/components/sections/hero';
 import { Stats } from '@/components/sections/stats';
 import { Services } from '@/components/sections/services';
 import { WhyChooseUs } from '@/components/sections/why-choose-us';
+import { Testimonials } from '@/components/sections/testimonials';
 import { BeforeAfterGallery } from '@/components/sections/before-after-gallery';
 import { AiRecommender } from '@/components/sections/ai-recommender';
 import WhatsAppButton from '@/components/ui/whatsapp-button';
@@ -17,6 +18,7 @@ export default function Home() {
         <Stats />
         <Services />
         <WhyChooseUs />
+        <Testimonials />
         <BeforeAfterGallery />
         <AiRecommender />
       </main>

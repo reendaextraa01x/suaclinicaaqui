@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import { Award, Gem, HandHeart } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -20,6 +23,28 @@ const features = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  },
+};
+
 export function WhyChooseUs() {
   const parallaxImage = PlaceHolderImages.find((img) => img.id === 'why-choose-us-parallax');
 
@@ -36,17 +61,27 @@ export function WhyChooseUs() {
       )}
       <div className="absolute inset-0 bg-white/70 backdrop-blur-sm" />
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
+      <motion.div
+        className="relative z-10 container mx-auto px-4 md:px-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <motion.div className="mx-auto mb-12 max-w-2xl text-center" variants={itemVariants}>
           <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">Por que nos escolher?</h2>
           <p className="mt-4 text-foreground/80 md:text-lg">
             Onde a arte encontra o luxo para uma experiência de beleza inesquecível.
           </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        </motion.div>
+        <motion.div
+          className="grid grid-cols-1 gap-8 md:grid-cols-3"
+          variants={containerVariants}
+        >
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={itemVariants}
               className="rounded-xl border border-primary/20 bg-white/30 p-8 text-center text-foreground shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-primary/10 hover:shadow-primary/20 hover:-translate-y-2"
             >
               <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted/50">
@@ -54,10 +89,10 @@ export function WhyChooseUs() {
               </div>
               <h3 className="font-headline text-2xl font-bold">{feature.title}</h3>
               <p className="mt-2 text-foreground/70">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
