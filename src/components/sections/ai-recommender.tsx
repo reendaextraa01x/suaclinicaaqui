@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useRef, useTransition } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useState, useRef, useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import Image from 'next/image';
 import { UploadCloud, WandSparkles, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -30,7 +30,7 @@ function SubmitButton() {
 
 export function AiRecommender() {
   const initialState: FormState = { success: false, message: '' };
-  const [state, formAction] = useFormState(getServiceSuggestion, initialState);
+  const [state, formAction] = useActionState(getServiceSuggestion, initialState);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [dataUri, setDataUri] = useState<string>('');
   const fileInputRef = useRef<HTMLInputElement>(null);
