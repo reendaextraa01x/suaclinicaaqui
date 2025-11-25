@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { motion } from 'framer-motion';
 import React from 'react';
+import Image from 'next/image';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,18 +38,14 @@ export function Hero() {
       className="relative h-[90svh] w-full overflow-hidden"
     >
       {heroImage && (
-        <video
-          src={heroImage.imageUrl}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover transform -translate-x-1/2 -translate-y-1/2"
-          poster={heroImage.imageUrl.replace('.mp4', '.jpg')}
-        >
-          <source src={heroImage.imageUrl} type="video/mp4" />
-          Seu navegador não suporta a tag de vídeo.
-        </video>
+         <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            data-ai-hint={heroImage.imageHint}
+            fill
+            className="object-cover"
+            priority
+         />
       )}
       
       <div className="absolute inset-0 bg-black/30" />

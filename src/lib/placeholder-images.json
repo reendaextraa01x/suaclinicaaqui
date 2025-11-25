@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An abstract, artistic video of flowing pink and gold particles.",
-      "imageUrl": "https://cdn.pixelbin.io/v2/white-label-dev/original/pexels-codioful-_a-tool-for-every-task_-19420511_1.mp4",
-      "imageHint": "abstract particles"
+      "description": "A beautiful, modern, and luxurious beauty salon interior.",
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NjQwNzk0MDl8MA&ixlib=rb-4.1.0&q=80&w=1920",
+      "imageHint": "luxury salon"
     },
     {
       "id": "why-choose-us-parallax",
