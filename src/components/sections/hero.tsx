@@ -63,10 +63,6 @@ export function Hero() {
         </video>
       )}
       
-      {/* Removemos o diamond-dust e a sobreposição escura para um visual mais limpo */}
-      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" /> */}
-      {/* <div id="diamond-dust" /> */}
-
       <motion.div
         className="pointer-events-none absolute inset-0 opacity-100 transition-opacity duration-300"
         style={{
