@@ -44,16 +44,39 @@ const testimonials = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  },
+};
+
+
 export function Testimonials() {
   return (
     <section id="testimonials" className="w-full bg-secondary/30 py-20 sm:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           className="mx-auto mb-16 max-w-2xl text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
+          variants={itemVariants}
         >
           <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">O Que Nossas Clientes Dizem</h2>
           <p className="mt-4 text-muted-foreground md:text-lg">
@@ -70,7 +93,14 @@ export function Testimonials() {
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2">
-                <div className="p-4">
+                <motion.div 
+                  className="p-4 h-full"
+                  variants={itemVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5, delay: index * 0.1}}
+                >
                   <Card className="h-full flex flex-col justify-between overflow-hidden border-primary/20 bg-card shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-1">
                     <CardContent className="p-8 text-center flex-1 flex flex-col items-center">
                       <Quote className="w-12 h-12 text-primary/30 mb-4" />
@@ -91,7 +121,7 @@ export function Testimonials() {
                       </div>
                     </CardContent>
                   </Card>
-                </div>
+                </motion.div>
               </CarouselItem>
             ))}
           </CarouselContent>
