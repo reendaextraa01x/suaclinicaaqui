@@ -177,8 +177,8 @@
       45deg,
       transparent,
       transparent 20px,
-      hsla(45, 100%, 85%, 0.1) 20px,
-      hsla(45, 100%, 85%, 0.1) 40px
+      hsla(45, 100%, 75%, 0.2) 20px,
+      hsla(45, 100%, 75%, 0.2) 40px
     );
     animation: golden-lines-anim 15s linear infinite;
     will-change: transform;
@@ -189,8 +189,8 @@
       -45deg,
       transparent,
       transparent 20px,
-      hsla(45, 100%, 85%, 0.1) 20px,
-      hsla(45, 100%, 85%, 0.1) 40px
+      hsla(45, 100%, 75%, 0.2) 20px,
+      hsla(45, 100%, 75%, 0.2) 40px
     );
     animation-direction: reverse;
     animation-duration: 20s;
