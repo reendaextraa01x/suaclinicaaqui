@@ -26,12 +26,12 @@ export function BeforeAfterGallery() {
   });
 
   return (
-    <section id="gallery" className="w-full bg-primary/10 py-20 sm:py-28">
+    <section id="gallery" className="w-full bg-muted/20 py-20 sm:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="font-headline text-4xl font-bold md:text-5xl">Our Transformations</h2>
+          <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">Nossas Transformações</h2>
           <p className="mt-4 text-muted-foreground md:text-lg">
-            Witness the stunning results of our expert touch. Hover over each image to see the change.
+            Testemunhe os resultados impressionantes do nosso toque especializado. Passe o mouse sobre cada imagem para ver a mudança.
           </p>
         </div>
         <Carousel
@@ -57,8 +57,8 @@ export function BeforeAfterGallery() {
               )
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
+          <CarouselPrevious className="hidden sm:flex text-primary hover:bg-muted" />
+          <CarouselNext className="hidden sm:flex text-primary hover:bg-muted" />
         </Carousel>
       </div>
     </section>

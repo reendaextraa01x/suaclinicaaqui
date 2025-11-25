@@ -12,16 +12,16 @@ import { useToast } from '@/hooks/use-toast';
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} size="lg" className="w-full font-bold bg-accent text-accent-foreground transition-all hover:bg-accent/90 hover:shadow-[0_0_15px_hsl(var(--accent))]">
+    <Button type="submit" disabled={pending} size="lg" className="w-full font-bold bg-secondary text-secondary-foreground transition-all hover:bg-secondary/90 hover:shadow-[0_0_15px_hsl(var(--secondary))]">
       {pending ? (
         <>
           <WandSparkles className="mr-2 h-4 w-4 animate-spin" />
-          Analyzing...
+          Analisando...
         </>
       ) : (
         <>
           <WandSparkles className="mr-2 h-4 w-4" />
-          Get Suggestion
+          Obter Sugestão
         </>
       )}
     </Button>
@@ -60,8 +60,8 @@ export function AiRecommender() {
     if (!dataUri) {
       toast({
         variant: "destructive",
-        title: "No Image Selected",
-        description: "Please upload an image of your face to get a suggestion.",
+        title: "Nenhuma imagem selecionada",
+        description: "Por favor, carregue uma imagem do seu rosto para obter uma sugestão.",
       });
       return;
     }
@@ -69,13 +69,13 @@ export function AiRecommender() {
   }
 
   return (
-    <section id="booking" className="w-full py-20 sm:py-28">
+    <section id="booking" className="w-full py-20 sm:py-28 bg-black">
       <div className="container mx-auto px-4 md:px-6">
-        <Card className="max-w-2xl mx-auto border-primary/20 shadow-xl">
+        <Card className="max-w-2xl mx-auto border-primary/30 bg-muted/30 shadow-2xl shadow-primary/10">
           <CardHeader className="text-center">
-            <CardTitle className="font-headline text-4xl">AI Beauty Consultant</CardTitle>
-            <CardDescription className="md:text-lg">
-              Not sure which service is right for you? Upload a photo of your face, and our AI will suggest the perfect treatment.
+            <CardTitle className="font-headline text-4xl text-primary">Consultor de Beleza IA</CardTitle>
+            <CardDescription className="md:text-lg text-white/80">
+              Não sabe qual serviço é o certo para você? Carregue uma foto do seu rosto e nossa IA sugerirá o tratamento perfeito.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -83,7 +83,7 @@ export function AiRecommender() {
               <input type="hidden" name="photoDataUri" value={dataUri} />
               <div className="space-y-2">
                 <div
-                  className="relative flex justify-center items-center w-full h-64 border-2 border-dashed rounded-lg cursor-pointer transition-colors hover:bg-primary/10 hover:border-primary"
+                  className="relative flex justify-center items-center w-full h-64 border-2 border-dashed border-muted-foreground/50 rounded-lg cursor-pointer transition-colors hover:bg-muted/50 hover:border-primary"
                   onClick={() => fileInputRef.current?.click()}
                 >
                   {imagePreview ? (
@@ -108,7 +108,7 @@ export function AiRecommender() {
                   ) : (
                     <div className="text-center">
                       <UploadCloud className="mx-auto h-12 w-12 text-muted-foreground" />
-                      <p className="mt-2 text-sm font-semibold text-foreground">Click to upload a photo</p>
+                      <p className="mt-2 text-sm font-semibold text-white/90">Clique para carregar uma foto</p>
                       <p className="text-xs text-muted-foreground">PNG, JPG, or WEBP</p>
                     </div>
                   )}
@@ -129,7 +129,7 @@ export function AiRecommender() {
             </form>
 
             {state.message && (
-              <div className={`mt-6 text-center p-4 rounded-md ${state.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+              <div className={`mt-6 text-center p-4 rounded-md ${state.success ? 'bg-green-900/50 text-green-300' : 'bg-red-900/50 text-red-300'}`}>
                 <p className="font-bold">{state.message}</p>
               </div>
             )}
