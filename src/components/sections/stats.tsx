@@ -40,9 +40,9 @@ const StatItem = ({
   return (
     <motion.div 
       variants={itemVariants}
-      className="group rounded-2xl border border-[hsl(var(--gold)_/_0.4)] bg-black/5 p-8 text-center backdrop-blur-sm transition-all duration-300 hover:border-[hsl(var(--gold))] hover:bg-black/10 hover:shadow-2xl hover:shadow-[hsl(var(--gold)_/_0.15)] hover:-translate-y-2"
+      className="group rounded-2xl border border-primary/20 bg-black/5 p-8 text-center backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-black/10 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2"
     >
-      <div className="mb-4 text-[hsl(var(--gold))] transition-transform duration-300 group-hover:scale-110">
+      <div className="mb-4 text-primary transition-transform duration-300 group-hover:scale-110">
         {icon}
       </div>
       <span
