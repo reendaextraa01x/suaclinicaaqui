@@ -28,20 +28,6 @@ const testimonials = [
     quote:
       'O design de sobrancelhas transformou meu rosto. A profissional foi incrível, entendeu exatamente o que eu queria. Recomendo de olhos fechados.',
   },
-  {
-    name: 'Fernanda L.',
-    avatar: 'https://i.pravatar.cc/150?img=3',
-    rating: 5,
-    quote:
-      'Fiz o lash lifting e estou apaixonada pelo resultado. Super natural e prático para o dia a dia. O ambiente da clínica é um luxo!',
-  },
-  {
-    name: 'Mariana P.',
-    avatar: 'https://i.pravatar.cc/150?img=4',
-    rating: 5,
-    quote:
-      'Atendimento impecável do início ao fim. As extensões de cílios ficaram perfeitas, exatamente como eu sonhava. Qualidade e profissionalismo definem o lugar.',
-  },
 ];
 
 const containerVariants = {
