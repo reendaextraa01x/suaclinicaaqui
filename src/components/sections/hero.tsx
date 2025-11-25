@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React from 'react';
 
 const containerVariants = {
@@ -31,21 +31,9 @@ const itemVariants = {
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const gradientX = useTransform(mouseX, (val) => `${val}px`);
-  const gradientY = useTransform(mouseY, (val) => `${val}px`);
-
-  const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    mouseX.set(event.clientX - rect.left);
-    mouseY.set(event.clientY - rect.top);
-  };
 
   return (
     <motion.section
-      onMouseMove={handleMouseMove}
       className="relative h-[90svh] w-full overflow-hidden"
     >
       {heroImage && (
@@ -63,12 +51,7 @@ export function Hero() {
         </video>
       )}
       
-      <motion.div
-        className="pointer-events-none absolute inset-0 opacity-100 transition-opacity duration-300"
-        style={{
-          background: `radial-gradient(400px circle at ${gradientX} ${gradientY}, hsl(var(--primary) / 0.2), transparent 80%)`,
-        }}
-      />
+      <div className="absolute inset-0 bg-black/30" />
       
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-foreground">
         <div className="container px-4 md:px-6">
