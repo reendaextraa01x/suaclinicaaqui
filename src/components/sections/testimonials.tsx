@@ -69,13 +69,17 @@ const itemVariants = {
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="w-full bg-secondary/30 py-20 sm:py-28">
+    <motion.section 
+      id="testimonials" 
+      className="w-full bg-secondary/30 py-20 sm:py-28"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={containerVariants}
+    >
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           className="mx-auto mb-16 max-w-2xl text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
           variants={itemVariants}
         >
           <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">O Que Nossas Clientes Dizem</h2>
@@ -96,10 +100,6 @@ export function Testimonials() {
                 <motion.div 
                   className="p-4 h-full"
                   variants={itemVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: index * 0.1}}
                 >
                   <Card className="h-full flex flex-col justify-between overflow-hidden border-primary/20 bg-card shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-1">
                     <CardContent className="p-8 text-center flex-1 flex flex-col items-center">
@@ -125,10 +125,10 @@ export function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex -left-12 text-primary hover:bg-muted" />
-          <CarouselNext className="hidden sm:flex -right-12 text-primary hover:bg-muted" />
+          <CarouselPrevious className="sm:-left-12 -left-4 text-primary hover:bg-muted" />
+          <CarouselNext className="sm:-right-12 -right-4 text-primary hover:bg-muted" />
         </Carousel>
       </div>
-    </section>
+    </motion.section>
   );
 }
