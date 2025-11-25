@@ -15,7 +15,7 @@
     {
       "id": "about-me-professional",
       "description": "Portrait of the beauty professional.",
-      "imageUrl": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiZWF1dHklMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3MjE4MzY3MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcyMjE3MzY2OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional portrait"
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "service-eyebrow-design",
       "description": "Image for Eyebrow Design service.",
-      "imageUrl": "https://images.unsplash.com/photo-1668458890888-dca291caa765?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleWVicm93JTIwZGVzaWdufGVufDB8fHx8MTc2NDA3OTI3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1668458890888-dca29b2caa765?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleWVicm93JTIwZGVzaWdufGVufDB8fHx8MTc2NDA3OTI3OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "eyebrow design"
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": "service-facial",
       "description": "Image for Facial service.",
-      "imageUrl": "https://images.unsplash.com/photo-1544717304-a2db4a7b16ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYWNpYWwlMjB0cmVhdG1lbnR8ZW58MHx8fHwxNzY0MDI5MDM5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1544717304-a2db4a7b16ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYWNpYWwlMjB0cmVhdG1lbnR8ZW58MHx8fHwxNzY0MDI5MDM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "facial treatment"
     }
   ]
