@@ -23,7 +23,7 @@ const StatItem = ({
         ref={ref}
         className="font-headline text-5xl font-bold text-primary md:text-6xl"
       >
-        {value > 100 ? `+${count.toLocaleString()}` : count}
+        {value > 100 ? `+${count.toLocaleString('pt-BR')}` : count}
       </span>
       <p className="mt-2 font-body text-lg text-foreground/80">{label}</p>
     </div>
