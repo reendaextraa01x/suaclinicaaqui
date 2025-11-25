@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -10,6 +12,7 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { motion } from 'framer-motion';
 
 const servicesData = [
   {
@@ -52,49 +55,85 @@ const servicesData = [
 
 const WHATSAPP_LINK = `https://wa.me/5511999999999?text=${encodeURIComponent("Olá! Gostaria de agendar um horário.")}`;
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  },
+};
+
 export function Services() {
   return (
-    <section className="w-full bg-muted/40 py-20 sm:py-28">
+    <motion.section 
+      className="w-full bg-muted/40 py-20 sm:py-28"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={containerVariants}
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
+        <motion.div 
+          className="mx-auto mb-16 max-w-2xl text-center"
+          variants={itemVariants}
+        >
           <h2 className="font-headline text-4xl font-bold text-primary md:text-5xl">Nossos Serviços</h2>
           <p className="mt-4 text-muted-foreground md:text-lg">
             Delicie-se com a nossa gama de tratamentos de beleza personalizados, elaborados com precisão e cuidado.
           </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        </motion.div>
+        <motion.div 
+          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          variants={containerVariants}
+        >
           {servicesData.map((service) => {
             const image = PlaceHolderImages.find((img) => img.id === service.id);
             return (
-              <Card key={service.id} className="group flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 border-transparent hover:border-primary/30 bg-card">
-                <CardHeader className="p-0">
-                  {image && (
-                    <div className="aspect-video relative overflow-hidden">
-                      <Image
-                        src={image.imageUrl}
-                        alt={service.title}
-                        data-ai-hint={image.imageHint}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </div>
-                  )}
-                </CardHeader>
-                <CardContent className="flex-1 p-6">
-                  <CardTitle className="font-headline text-2xl text-foreground">{service.title}</CardTitle>
-                  <CardDescription className="mt-2 text-foreground/70">{service.description}</CardDescription>
-                </CardContent>
-                <CardFooter className="flex items-center justify-between p-6 pt-0">
-                  <p className="text-2xl font-bold font-headline text-primary">{service.price}</p>
-                  <Button asChild className="font-bold bg-secondary text-secondary-foreground glow-on-hover-accent hover:scale-105">
-                    <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">Agendar</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+              <motion.div key={service.id} variants={itemVariants}>
+                <Card className="group flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 border-transparent hover:border-primary/30 bg-card h-full">
+                  <CardHeader className="p-0">
+                    {image && (
+                      <div className="aspect-video relative overflow-hidden">
+                        <Image
+                          src={image.imageUrl}
+                          alt={service.title}
+                          data-ai-hint={image.imageHint}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                      </div>
+                    )}
+                  </CardHeader>
+                  <CardContent className="flex-1 p-6">
+                    <CardTitle className="font-headline text-2xl text-foreground">{service.title}</CardTitle>
+                    <CardDescription className="mt-2 text-foreground/70">{service.description}</CardDescription>
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-between p-6 pt-0">
+                    <p className="text-2xl font-bold font-headline text-primary">{service.price}</p>
+                    <Button asChild className="font-bold bg-secondary text-secondary-foreground glow-on-hover-accent hover:scale-105">
+                      <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">Agendar</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

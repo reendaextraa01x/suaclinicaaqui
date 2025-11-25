@@ -3,6 +3,29 @@
 import { useCountUp } from '@/hooks/use-count-up';
 import { Award, Eye, Smile } from 'lucide-react';
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  },
+};
 
 const StatItem = ({
   value,
@@ -10,12 +33,15 @@ const StatItem = ({
   icon,
 }: {
   value: number;
-  label: string;
+  label:string;
   icon: React.ReactNode;
 }) => {
   const { count, ref } = useCountUp(value);
   return (
-    <div className="group rounded-2xl border border-[hsl(var(--gold)_/_0.4)] bg-black/5 p-8 text-center backdrop-blur-sm transition-all duration-300 hover:border-[hsl(var(--gold))] hover:bg-black/10 hover:shadow-2xl hover:shadow-[hsl(var(--gold)_/_0.15)] hover:-translate-y-2">
+    <motion.div 
+      variants={itemVariants}
+      className="group rounded-2xl border border-[hsl(var(--gold)_/_0.4)] bg-black/5 p-8 text-center backdrop-blur-sm transition-all duration-300 hover:border-[hsl(var(--gold))] hover:bg-black/10 hover:shadow-2xl hover:shadow-[hsl(var(--gold)_/_0.15)] hover:-translate-y-2"
+    >
       <div className="mb-4 text-[hsl(var(--gold))] transition-transform duration-300 group-hover:scale-110">
         {icon}
       </div>
@@ -26,7 +52,7 @@ const StatItem = ({
         {value > 100 ? `+${count.toLocaleString('pt-BR')}` : count}
       </span>
       <p className="mt-2 font-body text-lg text-foreground/80">{label}</p>
-    </div>
+    </motion.div>
   );
 };
 
@@ -38,14 +64,25 @@ export function Stats() {
   ];
 
   return (
-    <section id="stats" className="bg-background py-20 sm:py-28" style={{backgroundImage: 'radial-gradient(hsl(var(--muted)) 1px, transparent 1px)', backgroundSize: '4px 4px'}}>
+    <motion.section 
+      id="stats" 
+      className="bg-background py-20 sm:py-28" 
+      style={{backgroundImage: 'radial-gradient(hsl(var(--muted)) 1px, transparent 1px)', backgroundSize: '4px 4px'}}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
+        <motion.div 
+          className="grid grid-cols-1 gap-8 text-center md:grid-cols-3"
+          variants={containerVariants}
+        >
           {stats.map((stat) => (
             <StatItem key={stat.label} value={stat.value} label={stat.label} icon={stat.icon} />
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
