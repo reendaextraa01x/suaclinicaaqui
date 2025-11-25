@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -36,7 +35,7 @@ export function Hero() {
     <section className="relative h-[90svh] w-full overflow-hidden">
       {heroImage && (
         <video
-          src={heroImage.imageUrl.replace('.jpg', '.mp4')} 
+          src={heroImage.imageUrl.replace('.jpg', '.mp4')}
           autoPlay
           loop
           muted
@@ -57,28 +56,22 @@ export function Hero() {
             animate="visible"
             className="max-w-4xl mx-auto space-y-8"
           >
-            <motion.h1 
+            <motion.h1
               variants={itemVariants}
               className="font-headline text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
               style={{ textShadow: '0 4px 20px rgba(0,0,0,0.6)' }}
             >
-              A Arte da Beleza, Redefinida
+              Sua Beleza, Nossa Inspiração.
             </motion.h1>
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="font-body text-xl text-primary md:text-2xl"
               style={{ textShadow: '0 2px 10px rgba(0,0,0,0.7)' }}
             >
-              Descubra tratamentos exclusivos para realçar sua elegância natural.
+              Eleve sua autoestima com tratamentos que transcendem o comum.
             </motion.p>
-            <motion.div
-              variants={itemVariants}
-            >
-              <Button
-                asChild
-                size="lg"
-                className="font-bold text-lg"
-              >
+            <motion.div variants={itemVariants}>
+              <Button asChild size="lg" className="font-bold text-lg">
                 <Link href="#booking">Agende Sua Consulta</Link>
               </Button>
             </motion.div>
