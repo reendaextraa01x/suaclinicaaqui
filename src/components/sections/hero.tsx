@@ -51,7 +51,6 @@ export function Hero() {
       <div className="diamond-dust"></div>
       <div className="diamond-dust layer-2"></div>
       <div className="diamond-dust layer-3"></div>
-      <div className="golden-lines"></div>
       
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-foreground">
         <div className="container px-4 md:px-6">
