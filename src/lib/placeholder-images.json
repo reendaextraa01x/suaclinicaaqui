@@ -1,3 +1,124 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A subtle, looping video or GIF of lashes being applied.",
+      "imageUrl": "https://images.unsplash.com/photo-1650066464038-318a70bd0901?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxleWUlMjBsYXNoZXMlMjBtYWNyb3xlbnwwfHx8fDE3NjQwNzkyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes macro"
+    },
+    {
+      "id": "why-choose-us-parallax",
+      "description": "A background for the parallax section.",
+      "imageUrl": "https://images.unsplash.com/photo-1454262041357-5d96f50a2f27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzcGElMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc2NDA3OTI3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "spa background"
+    },
+    {
+      "id": "service-eyelash-extensions",
+      "description": "Image for Eyelash Extensions service.",
+      "imageUrl": "https://images.unsplash.com/photo-1633434679701-9767cd2ba15a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxleWVsYXNoJTIwZXh0ZW5zaW9uc3xlbnwwfHx8fDE3NjQwNzkyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eyelash extensions"
+    },
+    {
+      "id": "service-lash-lifting",
+      "description": "Image for Lash Lifting service.",
+      "imageUrl": "https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYXNoJTIwbGlmdGluZ3xlbnwwfHx8fDE3NjQwNzkyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lash lifting"
+    },
+    {
+      "id": "service-eyebrow-design",
+      "description": "Image for Eyebrow Design service.",
+      "imageUrl": "https://images.unsplash.com/photo-1668458890888-dca291caa765?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleWVicm93JTIwZGVzaWdufGVufDB8fHx8MTc2NDA3OTI3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eyebrow design"
+    },
+    {
+      "id": "service-manicure",
+      "description": "Image for Manicure service.",
+      "imageUrl": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW5pY3VyZXxlbnwwfHx8fDE3NjQwMTQ1ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "manicure"
+    },
+    {
+      "id": "service-pedicure",
+      "description": "Image for Pedicure service.",
+      "imageUrl": "https://images.unsplash.com/photo-1707725238063-0c54fb6963d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZWRpY3VyZXxlbnwwfHx8fDE3NjQwMTQ1Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pedicure"
+    },
+    {
+      "id": "service-facial",
+      "description": "Image for Facial service.",
+      "imageUrl": "https://images.unsplash.com/photo-1544717304-a2db4a7b16ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYWNpYWwlMjB0cmVhdG1lbnR8ZW58MHx8fHwxNzY0MDI5MDM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "facial treatment"
+    },
+    {
+      "id": "before-after-1-before",
+      "description": "Before image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1592869642456-7fee88e27aad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleWUlMjBsYXNoZXMlMjBiZWZvcmV8ZW58MHx8fHwxNzY0MDc5Mjc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes before"
+    },
+    {
+      "id": "before-after-1-after",
+      "description": "After image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1612289936033-e4caa6e97992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxleWUlMjBsYXNoZXMlMjBhZnRlcnxlbnwwfHx8fDE3NjQwNzkyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes after"
+    },
+    {
+      "id": "before-after-2-before",
+      "description": "Before image 2",
+      "imageUrl": "https://images.unsplash.com/photo-1738594399272-f05ad0a5ba8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxleWUlMjBsYXNoZXMlMjBiZWZvcmV8ZW58MHx8fHwxNzY0MDc5Mjc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes before"
+    },
+    {
+      "id": "before-after-2-after",
+      "description": "After image 2",
+      "imageUrl": "https://images.unsplash.com/photo-1612289936033-e4caa6e97992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxleWUlMjBsYXNoZXMlMjBhZnRlcnxlbnwwfHx8fDE3NjQwNzkyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes after"
+    },
+    {
+      "id": "before-after-3-before",
+      "description": "Before image 3",
+      "imageUrl": "https://images.unsplash.com/photo-1738248393412-87ecae54d5b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxleWUlMjBsYXNoZXMlMjBiZWZvcmV8ZW58MHx8fHwxNzY0MDc5Mjc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes before"
+    },
+    {
+      "id": "before-after-3-after",
+      "description": "After image 3",
+      "imageUrl": "https://images.unsplash.com/photo-1677962750686-ac7c014aad08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxleWUlMjBsYXNoZXMlMjBhZnRlcnxlbnwwfHx8fDE3NjQwNzkyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes after"
+    },
+    {
+      "id": "before-after-4-before",
+      "description": "Before image 4",
+      "imageUrl": "https://images.unsplash.com/photo-1738594399272-f05ad0a5ba8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxleWUlMjBsYXNoZXMlMjBiZWZvcmV8ZW58MHx8fHwxNzY0MDc5Mjc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes before"
+    },
+    {
+      "id": "before-after-4-after",
+      "description": "After image 4",
+      "imageUrl": "https://images.unsplash.com/photo-1584846969629-fa7b839b1bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxleWUlMjBsYXNoZXMlMjBhZnRlcnxlbnwwfHx8fDE3NjQwNzkyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes after"
+    },
+    {
+      "id": "before-after-5-before",
+      "description": "Before image 5",
+      "imageUrl": "https://images.unsplash.com/photo-1592869642456-7fee88e27aad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleWUlMjBsYXNoZXMlMjBiZWZvcmV8ZW58MHx8fHwxNzY0MDc5Mjc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes before"
+    },
+    {
+      "id": "before-after-5-after",
+      "description": "After image 5",
+      "imageUrl": "https://images.unsplash.com/photo-1612289936033-e4caa6e97992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxleWUlMjBsYXNoZXMlMjBhZnRlcnxlbnwwfHx8fDE3NjQwNzkyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes after"
+    },
+    {
+      "id": "before-after-6-before",
+      "description": "Before image 6",
+      "imageUrl": "https://images.unsplash.com/photo-1700084527436-f7aec435f4dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxleWUlMjBsYXNoZXMlMjBiZWZvcmV8ZW58MHx8fHwxNzY0MDc5Mjc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes before"
+    },
+    {
+      "id": "before-after-6-after",
+      "description": "After image 6",
+      "imageUrl": "https://images.unsplash.com/photo-1720517252615-83eed7b96fa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxleWUlMjBsYXNoZXMlMjBhZnRlcnxlbnwwfHx8fDE3NjQwNzkyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye lashes after"
+    }
+  ]
 }
