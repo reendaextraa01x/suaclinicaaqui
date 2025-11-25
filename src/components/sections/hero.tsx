@@ -77,7 +77,7 @@ export function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="font-bold text-lg transition-all duration-300 ease-in-out bg-primary text-primary-foreground shadow-[0_0_15px_rgba(255,215,0,0.5)] hover:shadow-[0_0_30px_rgba(255,215,0,0.8)] hover:scale-105 hover:bg-primary/90 animate-pulse"
+                className="font-bold text-lg"
               >
                 <Link href="#booking">Agende Sua Consulta</Link>
               </Button>
