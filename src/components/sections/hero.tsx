@@ -63,18 +63,14 @@ export function Hero() {
         </video>
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
 
       <motion.div
         className="pointer-events-none absolute inset-0 opacity-100 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(400px circle at ${gradientX} ${gradientY}, hsl(var(--primary) / 0.15), transparent 80%)`,
+          background: `radial-gradient(350px circle at ${gradientX} ${gradientY}, hsl(var(--primary) / 0.2), transparent 80%)`,
         }}
       />
-      
-      <div className="diamond-dust"></div>
-      <div className="diamond-dust layer-2"></div>
-      <div className="diamond-dust layer-3"></div>
       
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-foreground">
         <div className="container px-4 md:px-6">
@@ -87,14 +83,14 @@ export function Hero() {
             <motion.h1
               variants={itemVariants}
               className="font-headline text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
-              style={{ textShadow: '0 4px 30px hsl(var(--primary) / 0.5)' }}
+              style={{ textShadow: '0 3px 20px rgba(0, 0, 0, 0.4)' }}
             >
               Sua Beleza, Nossa Inspiração.
             </motion.h1>
             <motion.p
               variants={itemVariants}
               className="font-body text-xl text-white/90 md:text-2xl"
-              style={{ textShadow: '0 2px 15px rgba(0,0,0,0.3)' }}
+              style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)' }}
             >
               Eleve sua autoestima com tratamentos que transcendem o comum.
             </motion.p>
