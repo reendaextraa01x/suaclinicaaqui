@@ -63,14 +63,15 @@ export function Hero() {
         </video>
       )}
 
+      <div className="absolute inset-0 bg-black/10" />
+
       <motion.div
-        className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 opacity-100 transition-opacity duration-300"
         style={{
           background: `radial-gradient(400px circle at ${gradientX} ${gradientY}, hsl(var(--primary) / 0.15), transparent 80%)`,
         }}
       />
       
-      <div className="absolute inset-0 bg-black/10" />
       <div className="diamond-dust"></div>
       <div className="diamond-dust layer-2"></div>
       <div className="diamond-dust layer-3"></div>
